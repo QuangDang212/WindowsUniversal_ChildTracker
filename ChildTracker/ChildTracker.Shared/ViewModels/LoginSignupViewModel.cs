@@ -4,56 +4,58 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using Windows.UI.Popups;
 
 namespace ChildTracker.ViewModels
 {
     public class LoginSignupViewModel : ViewModelBase
     {
-        public UserViewModel User { get; set; }
-        public string Username { get; set; }
-        private ICommand signUpCommand;
-        private ICommand loginChildDevice;
+        //public string Username { get; set; }
+        //public string Password { get; set; }
+ 
+        //private ICommand signUpCommand;
+        //private ICommand loginChildDevice;
 
-        public LoginSignupViewModel()
-        {
-            this.User = new UserViewModel();
-        }
 
-        public ICommand SignUpCommand
-        {
-            get
-            {
-                if (this.signUpCommand==null)
-                {
-                    this.signUpCommand = new RelayCommand(PerformSignup);
-                }
-                return this.signUpCommand;
-            }           
-        }
-        
-        public ICommand LoginChildDevice
-        {
-            get
-            {
-                if (this.loginChildDevice == null)
-                {
-                    this.loginChildDevice = new RelayCommand(PerformChildLogin);
-                }
-                return this.loginChildDevice;
-            }           
-        }
+        //public ICommand SignUpCommand
+        //{
+        //    get
+        //    {
+        //        if (this.signUpCommand == null)
+        //        {
+        //            this.signUpCommand = new RelayCommand(PerformSignup);
+        //        }
+        //        return this.signUpCommand;
+        //    }
+        //}
 
-        private void PerformChildLogin()
-        {
-            throw new NotImplementedException();
-        }
+        //public ICommand LoginChildDevice
+        //{
+        //    get
+        //    {
+        //        if (this.loginChildDevice == null)
+        //        {
+        //            this.loginChildDevice = new RelayCommand(PerformChildLogin);
+        //        }
+        //        return this.loginChildDevice;
+        //    }
+        //}
 
-        private void PerformSignup()
-        {
-            var username = User.Username;
-            var pass = User.Password;
-            var b = 5;
-        }
+        //private void PerformChildLogin()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //private async void PerformSignup()
+        //{
+        //    //var username = this.Username;
+        //    //var pass = this.Password;
+        //    //var msg = new MessageDialog(string.Format("{0} - {1}", username, pass), "Test");
+
+        //    //await msg.ShowAsync();
+
+            
+        //}
 
     }
 }

@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-   
+
     <Grid Style="{StaticResource RootPanel}">
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -24,13 +24,14 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock Text="Username:" Grid.Row="0" Style="{StaticResource UserDataLabel}"/>
-        <TextBox Name="UsernameInput" PlaceholderText="Username" Grid.Row="1" Style="{StaticResource UsernameInput}" Text="{Binding Username, Mode=TwoWay}" />
+        <TextBox Name="UsernameInput" PlaceholderText="Username" Grid.Row="1" Style="{StaticResource UsernameInput}" />
         <TextBlock Text="Password:" Grid.Row="2" Style="{StaticResource UserDataLabel}"/>
-        <PasswordBox Name="PasswordInput" PlaceholderText="Password"  Grid.Row="3" Style="{StaticResource PasswordInput}" Password="{Binding User.Password}"/>
+        <PasswordBox Name="PasswordInput" PlaceholderText="Password"  Grid.Row="3" Style="{StaticResource PasswordInput}" />
         <Button Content="Login Child device" Style="{StaticResource LoginChild}"/>
         <Button Content="Login Parent device"  Style="{StaticResource LoginParent}"/>
         <TextBlock Text="Never used ChildTracker before?" Style="{StaticResource SignUpLabel}"/>
-        <Button x:ConnectionId='1' Content="Sign Up" Grid.Row="7" Style="{StaticResource LoginSignupButtons}" Command="{Binding SignUpCommand}"                         />
+        <Button x:ConnectionId='1' Content="Sign Up" Grid.Row="7" Style="{StaticResource LoginSignupButtons}"                        />
+        <ProgressRing x:Name="myProgressRing" Grid.Row="2"  IsActive="False" Background="Transparent" Height="150" Width="150" Grid.ColumnSpan="2" Margin="109,-9.722,111,16.111" Grid.RowSpan="2" RenderTransformOrigin="0.494,0.504"  />
     </Grid>
 </Page>
 

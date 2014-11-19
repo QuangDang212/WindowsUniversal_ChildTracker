@@ -11,14 +11,14 @@
     <Style TargetType="TextBox" x:Name="UsernameInput">
         <Setter Property="Grid.Row" Value="1"/>
         <Setter Property="Grid.ColumnSpan" Value="2"/>
-        <Setter Property="Height" Value="40"/>
+        <Setter Property="Height" Value="50"/>
         <Setter Property="Margin" Value="0 0 0 15"/>
     </Style>
     <Style TargetType="PasswordBox" x:Name="PasswordInput">
         <Setter Property="Grid.Row" Value="3"/>
         <Setter Property="Grid.ColumnSpan" Value="2"/>
-        <Setter Property="Height" Value="40"/>
-        <Setter Property="Margin" Value="0 0 0 35"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Margin" Value="0 0 0 30"/>
     </Style>
     <Style TargetType="Grid" x:Name="RootPanel">
         <Setter Property="VerticalAlignment" Value="Top"/>

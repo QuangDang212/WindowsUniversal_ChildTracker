@@ -17,19 +17,26 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginSignupViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ChildDeviceView.xaml.cs">
+      <DependentUpon>ChildDeviceView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\LoginRegisterPage.xaml.cs">
       <DependentUpon>LoginRegisterPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\ParentPhoneView.xaml.cs">
-      <DependentUpon>ParentPhoneView.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ParentDeviceView.xaml.cs">
+      <DependentUpon>ParentDeviceView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Views\ChildDeviceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\LoginRegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Views\ParentPhoneView.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)Views\ParentDeviceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

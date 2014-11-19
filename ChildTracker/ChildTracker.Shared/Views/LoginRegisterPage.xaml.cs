@@ -50,13 +50,16 @@ namespace ChildTracker
             // this event is handled for you.
         }
 
-        private async void OnSignUpBtnClick(object sender, RoutedEventArgs e)
+        private async void OnSignUpClick(object sender, RoutedEventArgs e)
         {
             var username = this.UsernameInput.Text;
-            var password = this.PasswordInput.Password;
-            var msg = new MessageDialog(string.Format("{0} - {1}", username, password), "Test");
-            
+            var pass = this.PasswordInput.Password;
+            var msg = new MessageDialog(string.Format("{0} - {1}", username, pass), "Test");
+            this.myProgressRing.IsActive = true;
             await msg.ShowAsync();
+            this.myProgressRing.IsActive = false;
+            
         }
+
     }
 }
