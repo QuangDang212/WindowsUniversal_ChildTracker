@@ -1,0 +1,49 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ChildTracker.Styles">
+    <Style TargetType="TextBlock" x:Name="UserDataLabel" >
+        <Setter Property="Grid.ColumnSpan" Value="2"/>
+        <Setter Property="FontSize" Value="27"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 20 0 0"/>
+    </Style>
+    <Style TargetType="TextBox" x:Name="UsernameInput">
+        <Setter Property="Grid.Row" Value="1"/>
+        <Setter Property="Grid.ColumnSpan" Value="2"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Margin" Value="0 0 0 15"/>
+    </Style>
+    <Style TargetType="PasswordBox" x:Name="PasswordInput">
+        <Setter Property="Grid.Row" Value="3"/>
+        <Setter Property="Grid.ColumnSpan" Value="2"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Margin" Value="0 0 0 35"/>
+    </Style>
+    <Style TargetType="Grid" x:Name="RootPanel">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="15 0 15 0"/>
+    </Style>
+    <Style TargetType="Button" x:Name="LoginSignupButtons">
+        <Setter Property="Grid.ColumnSpan" Value="2"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Margin" Value="0 5 0 5"/>
+    </Style>
+    <Style TargetType="Button" x:Name="LoginChild" BasedOn="{StaticResource LoginSignupButtons}">
+        <Setter Property="Grid.Row" Value="4"/>
+    </Style>
+    <Style TargetType="Button" x:Name="LoginParent" BasedOn="{StaticResource LoginSignupButtons}">
+        <Setter Property="Grid.Row" Value="5"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Name="SignUpLabel">
+        <Setter Property="Grid.Row" Value="6"/>
+        <Setter Property="Grid.ColumnSpan" Value="2"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Margin" Value="0 50 0 0"/>
+    </Style>
+</ResourceDictionary>
