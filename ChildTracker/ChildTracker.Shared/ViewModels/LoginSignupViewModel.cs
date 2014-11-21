@@ -30,7 +30,7 @@ namespace ChildTracker.ViewModels
             }
         }
 
-        public async Task<bool> SignUpUser()
+        public async Task<string> SignUpUser()
         {
             try
             {
@@ -39,11 +39,11 @@ namespace ChildTracker.ViewModels
                 user.Password = this.User.Password;
 
                 await user.SignUpAsync();
-                return true;
+                return "OK";
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return false;
+                return e.Message;
             }
         }
 

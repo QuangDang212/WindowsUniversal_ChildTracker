@@ -9,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -80,7 +81,7 @@ namespace ChildTracker
                 this.ViewModel.IsLoading = true;
                 var isSignUpSuccessful = await this.ViewModel.SignUpUser();
 
-                if (isSignUpSuccessful)
+                if (isSignUpSuccessful == "OK")
                 {
                     var username = this.ViewModel.User.Username;
                     msg = string.Format("You were successfully signed in. \n Now you can choose the appropriate Login!", username);
@@ -88,7 +89,7 @@ namespace ChildTracker
                 }
                 else
                 {
-                    msg = "Username is already taken!";
+                    msg = isSignUpSuccessful;
                     msgTitle = "Registration failed!";
                 }
             }
@@ -104,9 +105,9 @@ namespace ChildTracker
             if (isLoginSuccessful)
             {
                 this.Frame.Navigate(typeof(ParentDeviceView));
-                //TODO: mark type of login
+                ApplicationDataContainer localData = ApplicationData.Current.LocalSettings;
+                localData.Values["loginType"] = ParentDeviceView.PageKey;
             }
-
         }
 
         private async void OnLoginChildClick(object sender, RoutedEventArgs e)
@@ -114,8 +115,10 @@ namespace ChildTracker
             var isLoginSuccessful = await this.Login();
             if (isLoginSuccessful)
             {
+                ApplicationDataContainer localData = ApplicationData.Current.LocalSettings;
+                localData.Values["loginType"] = ChildDeviceView.PageKey;
+                localData.Values["password"] = this.ViewModel.User.Password.GetHashCode();
                 this.Frame.Navigate(typeof(ChildDeviceView));
-                //TODO: mark type of login
             }
         }
 

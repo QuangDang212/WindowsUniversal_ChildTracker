@@ -23,6 +23,8 @@ namespace ChildTracker.Views
     /// </summary>
     public sealed partial class ParentDeviceView : Page
     {
+        public const string PageKey = "Parent";
+
         public ParentDeviceView()
         {
             this.InitializeComponent();
@@ -32,7 +34,6 @@ namespace ChildTracker.Views
         {
             ParseUser.LogOut();
             this.Frame.Navigate(typeof(LoginSignupPage));
-
         }
     }
 }
