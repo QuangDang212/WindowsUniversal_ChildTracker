@@ -6,7 +6,9 @@ Assets\StoreLogo.scale-240.png
 Assets\WideLogo.scale-240.png
 App.xbf
 ChildTracker.WindowsPhone.xr.xml
+Styles\ChildDeviceViewStyles.xbf
 Styles\LoginSignupStyles.xbf
+Styles\ParentDeviceViewStyle.xbf
 Views\ChildDeviceView.xbf
-Views\LoginRegisterPage.xbf
+Views\LoginSignupPage.xbf
 Views\ParentDeviceView.xbf

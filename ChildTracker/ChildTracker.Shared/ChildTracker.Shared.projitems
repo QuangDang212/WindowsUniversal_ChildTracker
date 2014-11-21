@@ -15,13 +15,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MapView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginSignupViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ChildDeviceView.xaml.cs">
       <DependentUpon>ChildDeviceView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Views\LoginRegisterPage.xaml.cs">
-      <DependentUpon>LoginRegisterPage.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LoginSignupPage.xaml.cs">
+      <DependentUpon>LoginSignupPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\ParentDeviceView.xaml.cs">
       <DependentUpon>ParentDeviceView.xaml</DependentUpon>
@@ -32,7 +34,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="$(MSBuildThisFileDirectory)Views\LoginRegisterPage.xaml">
+    <Page Include="$(MSBuildThisFileDirectory)Views\LoginSignupPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

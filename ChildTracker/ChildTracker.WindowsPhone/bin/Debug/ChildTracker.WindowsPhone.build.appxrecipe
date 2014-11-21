@@ -61,14 +61,20 @@
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\Debug\Views\ChildDeviceView.xbf">
       <PackagePath>Views\ChildDeviceView.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\Debug\Views\LoginRegisterPage.xbf">
-      <PackagePath>Views\LoginRegisterPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\Debug\Views\LoginSignupPage.xbf">
+      <PackagePath>Views\LoginSignupPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\Debug\Views\ParentDeviceView.xbf">
       <PackagePath>Views\ParentDeviceView.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\Debug\Styles\ChildDeviceViewStyles.xbf">
+      <PackagePath>Styles\ChildDeviceViewStyles.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\Debug\Styles\LoginSignupStyles.xbf">
       <PackagePath>Styles\LoginSignupStyles.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\Debug\Styles\ParentDeviceViewStyle.xbf">
+      <PackagePath>Styles\ParentDeviceViewStyle.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\Debug\ChildTracker.WindowsPhone.xr.xml">
       <PackagePath>ChildTracker.WindowsPhone.xr.xml</PackagePath>

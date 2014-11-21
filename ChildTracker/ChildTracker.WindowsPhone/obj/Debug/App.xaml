@@ -6,7 +6,12 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="LoggedChildDeviceMessage">This device will monitor the location of your child in an interval of 30 minutes!</x:String>
+                </ResourceDictionary>
                 <ResourceDictionary Source="Styles/LoginSignupStyles.xaml"/>
+                <ResourceDictionary Source="Styles/ParentDeviceViewStyle.xaml"/>
+                <ResourceDictionary Source="Styles/ChildDeviceViewStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

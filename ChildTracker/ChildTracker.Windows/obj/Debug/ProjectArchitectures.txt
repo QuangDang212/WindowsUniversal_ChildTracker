@@ -1,1 +1,0 @@
-C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\ChildTracker.Windows.csproj;neutral
