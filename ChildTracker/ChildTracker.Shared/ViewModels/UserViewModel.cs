@@ -6,8 +6,13 @@ using System.Text;
 
 namespace ChildTracker.ViewModels
 {
-    public class UserViewModel:ViewModelBase
+    public class UserViewModel : ViewModelBase
     {
+        public UserViewModel()
+        {
+
+        }
+
         public string Username { get; set; }
         public string Password { get; set; }
     }
