@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parse;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,8 +30,9 @@ namespace ChildTracker.Views
 
         private void OnLogoutClick(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof(LoginSignupPage));
-            this.Frame.GoBack();
+            ParseUser.LogOut();
+            this.Frame.Navigate(typeof(LoginSignupPage));
+            
         }
     }
 }

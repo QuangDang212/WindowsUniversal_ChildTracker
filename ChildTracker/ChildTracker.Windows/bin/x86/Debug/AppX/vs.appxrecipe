@@ -410,7 +410,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-21T11:57:03.266</Modified>
+      <Modified>2014-11-21T16:49:38.113</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

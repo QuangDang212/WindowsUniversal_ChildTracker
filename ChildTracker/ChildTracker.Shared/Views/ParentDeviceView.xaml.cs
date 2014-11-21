@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parse;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,13 @@ namespace ChildTracker.Views
         public ParentDeviceView()
         {
             this.InitializeComponent();
+        }
+
+        private void OnLogoutClick(object sender, RoutedEventArgs e)
+        {
+            ParseUser.LogOut();
+            this.Frame.Navigate(typeof(LoginSignupPage));
+
         }
     }
 }

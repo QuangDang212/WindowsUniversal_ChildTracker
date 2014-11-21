@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parse;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,6 +38,9 @@ namespace ChildTracker
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
+            ParseClient.Initialize("bwPWRytv93etfGAWaoQMjpeKFv7KaeYDM4wSgKNe", "8w3uxWKbmHH7walJ265zBmUpy15ZXfcDvRwLxPQq");
+
         }
 
         /// <summary>

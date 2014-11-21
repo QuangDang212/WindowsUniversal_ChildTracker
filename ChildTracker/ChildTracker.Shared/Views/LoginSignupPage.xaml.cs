@@ -1,10 +1,12 @@
 ﻿using ChildTracker.ViewModels;
 using ChildTracker.Views;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Popups;
@@ -31,8 +33,21 @@ namespace ChildTracker
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            var loginSignupVM = new LoginSignupViewModel();            
+            var loginSignupVM = new LoginSignupViewModel();
             this.ViewModel = loginSignupVM;
+
+        }
+        public LoginSignupViewModel ViewModel
+        {
+            get
+            {
+                return (this.DataContext as LoginSignupViewModel);
+            }
+
+            set
+            {
+                this.DataContext = value;
+            }
         }
 
         /// <summary>
@@ -52,39 +67,106 @@ namespace ChildTracker
         }
 
         private async void OnSignUpClick(object sender, RoutedEventArgs e)
-        {           
-            var username = this.ViewModel.User.Username;
-            var pass = this.ViewModel.User.Password;
+        {
+            string msg, msgTitle;
 
-            var msg = new MessageDialog(string.Format("{0} - {1}", username, pass), "Test");
-            this.ViewModel.IsLoading = true;
-            await msg.ShowAsync();
+            if (!this.isUserInputValid())
+            {
+                msg = "Username and password should be at least 5 symbols long!";
+                msgTitle = "Incorrect user input!";
+            }
+            else
+            {
+                this.ViewModel.IsLoading = true;
+                var isSignUpSuccessful = await this.ViewModel.SignUpUser();
+
+                if (isSignUpSuccessful)
+                {
+                    var username = this.ViewModel.User.Username;
+                    msg = string.Format("You were successfully signed in. \n Now you can choose the appropriate Login!", username);
+                    msgTitle = "Successful registration!";
+                }
+                else
+                {
+                    msg = "Username is already taken!";
+                    msgTitle = "Registration failed!";
+                }
+            }
+
+            var dialog = new MessageDialog(msg, msgTitle);
+            await dialog.ShowAsync();
             this.ViewModel.IsLoading = false;
         }
 
-        private void OnLoginParentClick(object sender, RoutedEventArgs e)
+        private async void OnLoginParentClick(object sender, RoutedEventArgs e)
         {
-
-            this.Frame.Navigate(typeof(ParentDeviceView));
-        }
-
-        private void OnLoginChildClick(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(ChildDeviceView));
-        }
-
-
-        public LoginSignupViewModel ViewModel
-        {
-            get
+            var isLoginSuccessful = await this.Login();
+            if (isLoginSuccessful)
             {
-                return (this.DataContext as LoginSignupViewModel);
+                this.Frame.Navigate(typeof(ParentDeviceView));
+                //TODO: mark type of login
             }
 
-            set
+        }
+
+        private async void OnLoginChildClick(object sender, RoutedEventArgs e)
+        {
+            var isLoginSuccessful = await this.Login();
+            if (isLoginSuccessful)
             {
-                this.DataContext = value;
+                this.Frame.Navigate(typeof(ChildDeviceView));
+                //TODO: mark type of login
             }
+        }
+
+        private async Task<bool> Login()
+        {
+            string msg, msgTitle;
+
+            if (!this.isUserInputValid())
+            {
+                msg = "Username and password should be at least 5 symbols long!";
+                msgTitle = "Incorrect user input!";
+                await AlertUser(msg, msgTitle);
+
+                return false;
+            }
+            else
+            {
+                this.ViewModel.IsLoading = true;
+                var loginMsg = await this.ViewModel.LoginUser();
+                this.ViewModel.IsLoading = false;
+
+                if (loginMsg != "OK")
+                {
+                    await AlertUser(loginMsg, "Login failed!");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        private bool isUserInputValid()
+        {
+            var username = this.ViewModel.User.Username;
+            var password = this.ViewModel.User.Password;
+
+            if (string.IsNullOrEmpty(username) ||
+                string.IsNullOrEmpty(password) ||
+                username.Length < 5 || password.Length < 5)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private async Task AlertUser(string message, string title)
+        {
+            var dialog = new MessageDialog(message, title);
+            await dialog.ShowAsync();
         }
     }
 }
