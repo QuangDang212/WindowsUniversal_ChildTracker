@@ -7,8 +7,10 @@ Assets\WideLogo.scale-240.png
 App.xbf
 ChildTracker.WindowsPhone.xr.xml
 Styles\ChildDeviceViewStyles.xbf
+Styles\ConfirmLogoutStyles.xbf
 Styles\LoginSignupStyles.xbf
 Styles\ParentDeviceViewStyle.xbf
 Views\ChildDeviceView.xbf
+Views\ConfirmLogoutView.xbf
 Views\LoginSignupPage.xbf
 Views\ParentDeviceView.xbf

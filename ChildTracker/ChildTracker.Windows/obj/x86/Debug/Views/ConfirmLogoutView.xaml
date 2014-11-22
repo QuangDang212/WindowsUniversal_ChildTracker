@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="ChildTracker.Views.ConfirmLogoutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ChildTracker.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          Style="{StaticResource ConfirmLogoutGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="You need to confirm your password in order to logout:"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Style="{StaticResource ConfirmationMessage}"
+                   />
+
+        <PasswordBox Name="PasswordBoxInput"
+                     Grid.Row="1"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="2"                      
+                     Style="{StaticResource ConfirmationInput}"
+                     />
+
+        <Button x:ConnectionId='1' Content="Logout"
+                Grid.Row="2"
+                Grid.Column="0"
+                Style="{StaticResource Buttons}"
+                                           
+                />
+        <Button x:ConnectionId='2' Content="Cancel"
+                Grid.Row="2"
+                Grid.Column="1"
+                Style="{StaticResource Buttons}"
+                                           
+                />
+    </Grid>
+</Page>
+

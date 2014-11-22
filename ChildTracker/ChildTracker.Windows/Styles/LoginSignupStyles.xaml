@@ -6,15 +6,15 @@
         <Setter Property="Grid.ColumnSpan" Value="2"/>
         <Setter Property="FontSize" Value="27"/>
         <Setter Property="TextAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="0 10 0 0"/>
+        <Setter Property="Margin" Value="0 20 0 0"/>
 
         <Setter Property="FontSize" Value="45"/>
     </Style>
     <Style TargetType="TextBox" x:Name="UsernameInput">
         <Setter Property="Grid.Row" Value="1"/>
         <Setter Property="Grid.ColumnSpan" Value="2"/>
-        <Setter Property="Height" Value="60"/>
-        <Setter Property="Margin" Value="0 0 0 25"/>
+        <Setter Property="Height" Value="80"/>
+        <Setter Property="Margin" Value="0 0 0 5"/>
 
         <Setter Property="FontSize" Value="35"/>
     </Style>
@@ -22,7 +22,7 @@
         <Setter Property="Grid.Row" Value="3"/>
         <Setter Property="Grid.ColumnSpan" Value="2"/>
         <Setter Property="Grid.RowSpan" Value="2"/>
-        <Setter Property="MinHeight" Value="60"/>
+        <Setter Property="Height" Value="80"/>
         <Setter Property="Margin" Value="0 0 0 50"/>
 
         <Setter Property="FontSize" Value="35"/>

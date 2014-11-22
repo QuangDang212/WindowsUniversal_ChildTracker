@@ -22,6 +22,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ChildDeviceView.xaml.cs">
       <DependentUpon>ChildDeviceView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ConfirmLogoutView.xaml.cs">
+      <DependentUpon>ConfirmLogoutView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\LoginSignupPage.xaml.cs">
       <DependentUpon>LoginSignupPage.xaml</DependentUpon>
     </Compile>
@@ -31,6 +34,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)Views\ChildDeviceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\ConfirmLogoutView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

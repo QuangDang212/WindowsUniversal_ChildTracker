@@ -12,8 +12,9 @@
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
                 Style="{StaticResource rootPanel}">
         <StackPanel Style="{StaticResource controlsPanel}">
-            <Button Content="Logout"
+            <Button x:ConnectionId='1' Content="Logout"
                 Style="{StaticResource LogoutButton}"
+                                     
                 />
 
             <Button Content="Get child location"

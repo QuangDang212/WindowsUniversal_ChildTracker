@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -35,19 +36,7 @@ namespace ChildTracker.Views
 
         private void OnLogoutClick(object sender, RoutedEventArgs e)
         {
-            ParseUser.LogOut();
-            //TODO: add password confirmation
-            ApplicationDataContainer localData = ApplicationData.Current.LocalSettings;
-            localData.Values["loginType"] = String.Empty;
-            this.Frame.Navigate(typeof(LoginSignupPage));
-            
+            this.Frame.Navigate(typeof(ConfirmLogoutView));
         }
-
-        //private async Task<bool> ConfirmPassword()
-        //{
-        //    var dialog = new MessageDialog("", "Confirm password");
-            
-        //    await dialog.ShowAsync();
-        //}
     }
 }

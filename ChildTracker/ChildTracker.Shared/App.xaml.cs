@@ -102,7 +102,7 @@ namespace ChildTracker
                 // configuring the new page by passing required information as a navigation
                 // parameter
                 ApplicationDataContainer localData = ApplicationData.Current.LocalSettings;
-                var loginType = localData.Values["loginType"].ToString();
+                var loginType = localData.Values["loginType"];
                 Type pageType;
                 if (ParseUser.CurrentUser == null)
                 {
@@ -110,7 +110,7 @@ namespace ChildTracker
                 }
                 else
                 {
-                    if (loginType == ParentDeviceView.PageKey)
+                    if (loginType.ToString() == ParentDeviceView.PageKey)
                     {
                         pageType = typeof(ParentDeviceView);
                     }

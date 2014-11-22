@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Styles/LoginSignupStyles.xaml"/>
                 <ResourceDictionary Source="Styles/ParentDeviceViewStyle.xaml"/>
                 <ResourceDictionary Source="Styles/ChildDeviceViewStyles.xaml"/>
+                <ResourceDictionary Source="Styles/ConfirmLogoutStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
