@@ -17,6 +17,8 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\MapView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LocationModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ChildDeviceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginSignupViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ChildDeviceView.xaml.cs">

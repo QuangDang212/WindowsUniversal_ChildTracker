@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows;
+using ChildTracker.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,11 +33,27 @@ namespace ChildTracker.Views
         public ChildDeviceView()
         {
             this.InitializeComponent();
+            var childDeviceVM = new ChildDeviceViewModel();
+            this.ViewModel = childDeviceVM;
         }
 
         private void OnLogoutClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ConfirmLogoutView));
+        }
+
+
+
+        public ChildDeviceViewModel ViewModel
+        {
+            get
+            {
+                return this.DataContext as ChildDeviceViewModel;
+            }
+            set
+            {
+                this.DataContext = value;
+            }
         }
     }
 }

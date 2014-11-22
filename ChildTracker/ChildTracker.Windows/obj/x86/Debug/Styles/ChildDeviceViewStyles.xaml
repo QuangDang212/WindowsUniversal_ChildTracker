@@ -8,13 +8,14 @@
         <Setter Property="Width" Value="170" />
         <Setter Property="Height" Value="90" />
         <Setter Property="Padding" Value="0 0 0 8" />
+        <Setter Property="Margin" Value="20 20 0 0"/>
     </Style>
     <Style TargetType="TextBlock" x:Name="MessageToUser">
         <Setter Property="FontSize" Value="50" />
         <Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="TextAlignment" Value="Justify" />
+        <Setter Property="TextAlignment" Value="Center" />
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="5 200 5 0" />
+        <Setter Property="Margin" Value="50 200 50 0" />
     </Style>
 </ResourceDictionary>
 

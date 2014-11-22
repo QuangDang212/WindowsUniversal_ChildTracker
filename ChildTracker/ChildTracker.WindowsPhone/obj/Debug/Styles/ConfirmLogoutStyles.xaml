@@ -12,11 +12,11 @@
     </Style>
     <Style TargetType="PasswordBox" x:Name="ConfirmationInput">
         <Setter Property="FontSize" Value="40"/>
-        <Setter Property="Margin" Value="50 50 50 50"/>
+        <Setter Property="Margin" Value="30 50 30 50"/>
     </Style>
     <Style TargetType="Button" x:Name="Buttons">
         <Setter Property="FontSize" Value="30"/>
-        <Setter Property="Margin" Value="50 -150 0 150"/>
+        <Setter Property="Margin" Value="30 -150 0 150"/>
         <Setter Property="Padding" Value="20 10 20 15"/>
     </Style>
 </ResourceDictionary>

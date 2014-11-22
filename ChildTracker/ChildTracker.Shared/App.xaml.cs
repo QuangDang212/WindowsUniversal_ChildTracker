@@ -1,4 +1,5 @@
-﻿using ChildTracker.Views;
+﻿using ChildTracker.Models;
+using ChildTracker.Views;
 using Parse;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,7 @@ namespace ChildTracker
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 
+            ParseObject.RegisterSubclass<LocationModel>();
             ParseClient.Initialize("bwPWRytv93etfGAWaoQMjpeKFv7KaeYDM4wSgKNe", "8w3uxWKbmHH7walJ265zBmUpy15ZXfcDvRwLxPQq");
 
         }
