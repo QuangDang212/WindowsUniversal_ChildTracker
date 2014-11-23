@@ -5,6 +5,7 @@
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="LatestLocationReviews" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -114,6 +115,9 @@
     <RootType FullName="ChildTracker.LoginSignupPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="ChildTracker.Views.ParentDeviceView" />
   </Roots.RootTypes>

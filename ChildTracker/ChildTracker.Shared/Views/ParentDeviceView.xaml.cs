@@ -1,4 +1,5 @@
-﻿using ChildTracker.ViewModels;
+﻿using ChildTracker.Models;
+using ChildTracker.ViewModels;
 using Parse;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +27,7 @@ namespace ChildTracker.Views
     /// </summary>
     public sealed partial class ParentDeviceView : Page
     {
+       
         public const string PageKey = "Parent";
 
         public ParentDeviceView()
@@ -32,12 +35,7 @@ namespace ChildTracker.Views
             this.InitializeComponent();
 
             this.ViewModel = new ParentDeviceViewModel();
-        }
-
-        private void OnLogoutClick(object sender, RoutedEventArgs e)
-        {
-            ParseUser.LogOut();
-            this.Frame.Navigate(typeof(LoginSignupPage));
+            this.WelkomeMessage();
         }
 
         public ParentDeviceViewModel ViewModel
@@ -50,6 +48,23 @@ namespace ChildTracker.Views
             {
                 this.DataContext = value;
             }
+        }
+
+        private void WelkomeMessage()
+        {
+            string message = "To view your child last location press \"Get child location\". \nYou can check your latest reviews from the dropdown list!";
+#if WINDOWS_PHONE_APP
+            message = "To view your child last location press \n\"Get child location\". \nYou can check your latest reviews from the dropdown list!";
+#endif
+            string title = string.Format("Welcome, {0}!", ParseUser.CurrentUser.Username);
+            var msg = new MessageDialog(message, title);
+            msg.ShowAsync();
+        }
+
+        private void OnLogoutClick(object sender, RoutedEventArgs e)
+        {
+            ParseUser.LogOut();
+            this.Frame.Navigate(typeof(LoginSignupPage));
         }
 
         private async void GetLocationBtn_Click(object sender, RoutedEventArgs e)
@@ -65,6 +80,14 @@ namespace ChildTracker.Views
             {
                 this.ChildLocationMap.Zoom = e.NewValue;
             }
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var position = new BasicGeoposition();
+            position.Latitude = ((SQLiteLocationModel)e.AddedItems[0]).Latitude;
+            position.Longitude = ((SQLiteLocationModel)e.AddedItems[0]).Longitude;
+            this.ChildLocationMap.Center = new Geopoint(position);
         }
     }
 }

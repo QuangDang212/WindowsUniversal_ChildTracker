@@ -1,9 +1,11 @@
 ﻿using ChildTracker.Models;
+using ChildTracker.SQLiteManagement;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Parse;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,20 +16,42 @@ namespace ChildTracker.ViewModels
 {
     public class ParentDeviceViewModel:ViewModelBase
     {
-        //private ICommand _getLocationCommand;
-        private BasicGeoposition _currentSelection;
 
-        //public ICommand GetLocation
-        //{
-        //    get
-        //    {
-        //        if (this._getLocationCommand == null)
-        //        {
-        //            this._getLocationCommand = new RelayCommand(GetChildLastLocation);
-        //        }
-        //        return this._getLocationCommand;
-        //    }
-        //}
+        private BasicGeoposition _currentSelection;
+        private SQLiteLocationsDBHelper _locationsDb;
+        private ObservableCollection<SQLiteLocationModel> _latestLocationReviews;
+
+
+        public ParentDeviceViewModel()
+        {
+            this._locationsDb = SQLiteLocationsDBHelper.Instance();
+            this._locationsDb.InitializeDB();
+            this.GetLatestLocations();
+        }
+
+        public IEnumerable<SQLiteLocationModel> LatestLocationReviews
+        {
+            get 
+             {
+                if (this._latestLocationReviews == null)
+                {
+                    this._latestLocationReviews = new ObservableCollection<SQLiteLocationModel>();
+                }
+                return this._latestLocationReviews;
+            }
+            set
+            {
+             if (this._latestLocationReviews == null)
+                {
+                    this._latestLocationReviews = new ObservableCollection<SQLiteLocationModel>();
+                }
+                this._latestLocationReviews.Clear();
+                foreach (var item in value)
+                {
+                    this._latestLocationReviews.Add(item);
+                }
+            }
+        }
 
         public BasicGeoposition CurrentSelection
         {
@@ -54,8 +78,22 @@ namespace ChildTracker.ViewModels
                 position.Latitude = latestLocation.Latitude;
                 position.Longitude = latestLocation.Longitude;
                 this.CurrentSelection = position;
-                //TODO: add to SQLite
+                
+                var dbLocation = new SQLiteLocationModel(){
+                    Latitude = latestLocation.Latitude,
+                    Longitude = latestLocation.Longitude,
+                    LocationDate = (DateTime)latestLocation.CreatedAt,
+                    UserId = ParseUser.CurrentUser.ObjectId.ToString()
+                };
+
+                await this._locationsDb.AddLocation(dbLocation);
             }
+        }
+
+        private async void GetLatestLocations()
+        {
+            var userID = ParseUser.CurrentUser.ObjectId.ToString();
+            this.LatestLocationReviews = await this._locationsDb.GetLatestFiveLocationsForUser(userID);
         }
     }
 }

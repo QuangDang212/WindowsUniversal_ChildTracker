@@ -18,6 +18,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Extensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\MapView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocationModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SQLiteLocationModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SQLiteManagement\SQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SQLiteManagement\SQLiteAsync.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SQLiteManagement\SQLiteLocationsDBHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ChildDeviceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginSignupViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ParentDeviceViewModel.cs" />

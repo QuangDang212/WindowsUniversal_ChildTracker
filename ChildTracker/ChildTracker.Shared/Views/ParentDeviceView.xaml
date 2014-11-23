@@ -33,7 +33,11 @@
             </StackPanel>
             <TextBlock Text="Recent location reviews:" 
                        Style="{StaticResource RecentReviewsTb}"/>
-            <ComboBox PlaceholderText="your latest reviews" />
+            <ComboBox PlaceholderText="your latest reviews" 
+                      ItemsSource="{Binding LatestLocationReviews}"
+                      DisplayMemberPath="LocationDate"
+                      SelectionChanged="ComboBox_SelectionChanged"/>
+            
         </StackPanel>
         <StackPanel Style="{StaticResource mapPanel}">
             <Maps:MapView x:Name="ChildLocationMap"
