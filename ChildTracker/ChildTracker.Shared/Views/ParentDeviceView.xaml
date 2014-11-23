@@ -17,18 +17,27 @@
                 Click="OnLogoutClick"
                 />
 
-            <Button Content="Get child location"
-               Style="{StaticResource GetChildLocationBtn}"/>
+            <Button Name="GetLocationBtn" 
+                    Content="Get child location"
+                    Style="{StaticResource GetChildLocationBtn}"
+                    Click="GetLocationBtn_Click"/>
 
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Zoom:" Style="{StaticResource ZoomText}"/>
-                <Slider Style="{StaticResource ZoomSlider}"/>
+                <TextBlock Text="Zoom:" 
+                           Style="{StaticResource ZoomText}"/>
+                <Slider Name="MapZoom" 
+                        Style="{StaticResource ZoomSlider}" 
+                        Minimum="10" 
+                        Maximum="20" 
+                        ValueChanged="MapZoom_ValueChanged"/>
             </StackPanel>
-            <TextBlock Text="Recent location reviews:" Style="{StaticResource RecentReviewsTb}"/>
+            <TextBlock Text="Recent location reviews:" 
+                       Style="{StaticResource RecentReviewsTb}"/>
             <ComboBox PlaceholderText="your latest reviews" />
         </StackPanel>
         <StackPanel Style="{StaticResource mapPanel}">
-            <Maps:MapView Style="{StaticResource MapDisplay}" />
+            <Maps:MapView x:Name="ChildLocationMap"
+                          Style="{StaticResource MapDisplay}" />
         </StackPanel>
     </StackPanel>
 </Page>

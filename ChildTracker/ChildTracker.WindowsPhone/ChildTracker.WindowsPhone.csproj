@@ -141,6 +141,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LocationSenderTask\LocationSenderTask.csproj">
+      <Project>{172043a7-0234-4306-9bf9-f3756741f568}</Project>
+      <Name>LocationSenderTask</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

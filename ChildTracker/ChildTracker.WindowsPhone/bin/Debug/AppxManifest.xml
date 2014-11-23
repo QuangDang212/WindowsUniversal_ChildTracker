@@ -27,12 +27,27 @@
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
       </m3:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="LocationSenderTask.LocationSender">
+          <BackgroundTasks>
+            <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClientServer" />
     <DeviceCapability Name="location" />
   </Capabilities>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>CLRHost.dll</Path>
+        <ActivatableClass ActivatableClassId="LocationSenderTask.LocationSender" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
   <build:Metadata>
     <build:Item Name="SharedGUID" Value="6d73fde2-c535-43ec-99ac-bf1e1ef5cc69" />
     <build:Item Name="CodeSharingProject" Value="248F659F-DAC5-46E8-AC09-60EC9FC95053" />

@@ -5,13 +5,16 @@ using System.Text;
 using Windows.UI.Popups;
 using Windows.Devices.Geolocation;
 using ChildTracker.Models;
+using Windows.UI.Xaml;
+using Windows.ApplicationModel.Background;
+using Parse;
+using LocationSenderTask;
 namespace ChildTracker.ViewModels
 {
-    public class ChildDeviceViewModel:ViewModelBase
+    public class ChildDeviceViewModel : ViewModelBase
     {
         public ChildDeviceViewModel()
         {
-
             this.SendLocation();
         }
 
@@ -31,8 +34,14 @@ namespace ChildTracker.ViewModels
 
             await location.SaveAsync();
 
-            var popup = new MessageDialog(string.Format("latitude: {0} \nlongitude: {1} ", lat, lon));
-            await popup.ShowAsync();
+
+            ////Background task
+            //await BackgroundExecutionManager.RequestAccessAsync();
+            //BackgroundTaskBuilder taskBuilder = new BackgroundTaskBuilder { Name = "Localization task", TaskEntryPoint = "LocationSenderTask.LocationSender" };
+            //taskBuilder.SetTrigger(new TimeTrigger(30, false));
+            //BackgroundTaskRegistration myTask = taskBuilder.Register();
+
+            //await (new MessageDialog("Task registered")).ShowAsync();          
         }
     }
 }

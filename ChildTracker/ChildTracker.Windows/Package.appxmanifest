@@ -16,8 +16,16 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ChildTracker.Windows.App">
       <m2:VisualElements DisplayName="ChildTracker.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="ChildTracker.Windows" ForegroundText="light" BackgroundColor="#464646">
+        <m2:LockScreen Notification="badge" BadgeLogo="Assets\smalllogoscale-24.png" />
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
       </m2:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="LocationSenderTask.LocationSender">
+          <BackgroundTasks>
+            <Task Type="timer" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>

@@ -30,8 +30,10 @@ namespace ChildTracker.Helpers
         {
 #if WINDOWS_APP
             _map = new Map();
+            _map.Credentials ="AiFTXnMoalZ-eN9AjO34J_3ZIv0r1rFsnEKOn8TUBD6QvCyoVm7FVGkdNZzM7bVu";
 #elif WINDOWS_PHONE_APP
             _map = new MapControl();
+            _map.MapServiceToken = "AiFTXnMoalZ-eN9AjO34J_3ZIv0r1rFsnEKOn8TUBD6QvCyoVm7FVGkdNZzM7bVu";
 #endif
 
             this.Children.Add(_map);

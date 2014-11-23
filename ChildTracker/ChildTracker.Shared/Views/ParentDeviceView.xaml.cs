@@ -1,9 +1,11 @@
-﻿using Parse;
+﻿using ChildTracker.ViewModels;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -28,12 +30,41 @@ namespace ChildTracker.Views
         public ParentDeviceView()
         {
             this.InitializeComponent();
+
+            this.ViewModel = new ParentDeviceViewModel();
         }
 
         private void OnLogoutClick(object sender, RoutedEventArgs e)
         {
             ParseUser.LogOut();
             this.Frame.Navigate(typeof(LoginSignupPage));
+        }
+
+        public ParentDeviceViewModel ViewModel
+        {
+            get
+            {
+                return this.DataContext as ParentDeviceViewModel;
+            }
+            set
+            {
+                this.DataContext = value;
+            }
+        }
+
+        private async void GetLocationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            await this.ViewModel.GetChildLastLocation();
+            this.ChildLocationMap.Center = new Geopoint(this.ViewModel.CurrentSelection);
+            this.ChildLocationMap.Zoom = 10d;
+        }
+
+        private void MapZoom_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            if (this.ChildLocationMap != null)
+            {
+                this.ChildLocationMap.Zoom = e.NewValue;
+            }
         }
     }
 }

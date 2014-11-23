@@ -124,7 +124,7 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[17];
+            _typeNameTable = new string[18];
             _typeNameTable[0] = "ChildTracker.Helpers.MapView";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Grid";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.Panel";
@@ -142,8 +142,9 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
             _typeNameTable[14] = "ChildTracker.LoginSignupPage";
             _typeNameTable[15] = "ChildTracker.ViewModels.LoginSignupViewModel";
             _typeNameTable[16] = "ChildTracker.Views.ParentDeviceView";
+            _typeNameTable[17] = "ChildTracker.ViewModels.ParentDeviceViewModel";
 
-            _typeTable = new global::System.Type[17];
+            _typeTable = new global::System.Type[18];
             _typeTable[0] = typeof(global::ChildTracker.Helpers.MapView);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Grid);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.Panel);
@@ -161,6 +162,7 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
             _typeTable[14] = typeof(global::ChildTracker.LoginSignupPage);
             _typeTable[15] = typeof(global::ChildTracker.ViewModels.LoginSignupViewModel);
             _typeTable[16] = typeof(global::ChildTracker.Views.ParentDeviceView);
+            _typeTable[17] = typeof(global::ChildTracker.ViewModels.ParentDeviceViewModel);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -203,6 +205,7 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
         private object Activate_14_LoginSignupPage() { return new global::ChildTracker.LoginSignupPage(); }
         private object Activate_15_LoginSignupViewModel() { return new global::ChildTracker.ViewModels.LoginSignupViewModel(); }
         private object Activate_16_ParentDeviceView() { return new global::ChildTracker.Views.ParentDeviceView(); }
+        private object Activate_17_ParentDeviceViewModel() { return new global::ChildTracker.ViewModels.ParentDeviceViewModel(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -310,6 +313,14 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
             case 16:   //  ChildTracker.Views.ParentDeviceView
                 userType = new global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_16_ParentDeviceView;
+                userType.AddMemberName("ViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  ChildTracker.ViewModels.ParentDeviceViewModel
+                userType = new global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -378,6 +389,16 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
             var that = (global::ChildTracker.LoginSignupPage)instance;
             that.ViewModel = (global::ChildTracker.ViewModels.LoginSignupViewModel)Value;
         }
+        private object get_6_ParentDeviceView_ViewModel(object instance)
+        {
+            var that = (global::ChildTracker.Views.ParentDeviceView)instance;
+            return that.ViewModel;
+        }
+        private void set_6_ParentDeviceView_ViewModel(object instance, object Value)
+        {
+            var that = (global::ChildTracker.Views.ParentDeviceView)instance;
+            that.ViewModel = (global::ChildTracker.ViewModels.ParentDeviceViewModel)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -421,6 +442,12 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
                 xamlMember = new global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlMember(this, "ViewModel", "ChildTracker.ViewModels.LoginSignupViewModel");
                 xamlMember.Getter = get_5_LoginSignupPage_ViewModel;
                 xamlMember.Setter = set_5_LoginSignupPage_ViewModel;
+                break;
+            case "ChildTracker.Views.ParentDeviceView.ViewModel":
+                userType = (global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ChildTracker.Views.ParentDeviceView");
+                xamlMember = new global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlMember(this, "ViewModel", "ChildTracker.ViewModels.ParentDeviceViewModel");
+                xamlMember.Getter = get_6_ParentDeviceView_ViewModel;
+                xamlMember.Setter = set_6_ParentDeviceView_ViewModel;
                 break;
             }
             return xamlMember;
@@ -747,5 +774,7 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
         }
     }
 }
+
+
 
 

@@ -20,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocationModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ChildDeviceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginSignupViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ParentDeviceViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ChildDeviceView.xaml.cs">
       <DependentUpon>ChildDeviceView.xaml</DependentUpon>

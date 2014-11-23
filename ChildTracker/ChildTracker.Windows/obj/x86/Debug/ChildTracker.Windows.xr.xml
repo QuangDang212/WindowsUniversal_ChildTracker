@@ -18,6 +18,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Style" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Name" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ContentControl">
@@ -81,7 +82,11 @@
       <RootProperty Name="Style" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">
+      <RootProperty Name="Name" />
       <RootProperty Name="Style" />
+      <RootProperty Name="Minimum" />
+      <RootProperty Name="Maximum" />
+      <RootEvent Name="ValueChanged" />
     </RootType>
     <RootType FullName="ChildTracker.Helpers.MapView">
       <RootProperty Name="Style" />

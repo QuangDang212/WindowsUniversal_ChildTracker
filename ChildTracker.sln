@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildTracker.Windows", "Chi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildTracker.WindowsPhone", "ChildTracker\ChildTracker.WindowsPhone\ChildTracker.WindowsPhone.csproj", "{CE3163F4-BDC9-491C-BD25-CF82F7995468}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationSenderTask", "LocationSenderTask\LocationSenderTask.csproj", "{172043A7-0234-4306-9BF9-F3756741F568}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		ChildTracker\ChildTracker.Shared\ChildTracker.Shared.projitems*{aab8db60-ee51-4587-9aa9-cd8e9d3472ae}*SharedItemsImports = 4
@@ -72,6 +74,16 @@ Global
 		{CE3163F4-BDC9-491C-BD25-CF82F7995468}.Release|x86.ActiveCfg = Release|x86
 		{CE3163F4-BDC9-491C-BD25-CF82F7995468}.Release|x86.Build.0 = Release|x86
 		{CE3163F4-BDC9-491C-BD25-CF82F7995468}.Release|x86.Deploy.0 = Release|x86
+		{172043A7-0234-4306-9BF9-F3756741F568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172043A7-0234-4306-9BF9-F3756741F568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172043A7-0234-4306-9BF9-F3756741F568}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{172043A7-0234-4306-9BF9-F3756741F568}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{172043A7-0234-4306-9BF9-F3756741F568}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{172043A7-0234-4306-9BF9-F3756741F568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172043A7-0234-4306-9BF9-F3756741F568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172043A7-0234-4306-9BF9-F3756741F568}.Release|ARM.ActiveCfg = Release|Any CPU
+		{172043A7-0234-4306-9BF9-F3756741F568}.Release|x64.ActiveCfg = Release|Any CPU
+		{172043A7-0234-4306-9BF9-F3756741F568}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

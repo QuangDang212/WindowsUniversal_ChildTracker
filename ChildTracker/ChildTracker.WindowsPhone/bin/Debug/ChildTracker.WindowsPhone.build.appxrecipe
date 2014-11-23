@@ -37,6 +37,9 @@
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\Libs\Parse.WinRT.dll">
       <PackagePath>Parse.WinRT.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\LocationSenderTask.winmd">
+      <PackagePath>LocationSenderTask.winmd</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>

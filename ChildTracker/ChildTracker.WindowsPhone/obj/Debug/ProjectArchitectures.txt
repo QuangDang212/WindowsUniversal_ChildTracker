@@ -1,1 +1,2 @@
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\ChildTracker.WindowsPhone.csproj;neutral
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\LocationSenderTask.csproj;neutral
