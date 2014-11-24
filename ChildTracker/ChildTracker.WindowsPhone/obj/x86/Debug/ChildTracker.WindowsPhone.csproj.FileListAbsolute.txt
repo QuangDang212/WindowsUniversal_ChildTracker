@@ -1,3 +1,4 @@
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\ChildTracker.WindowsPhone.pdb
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\x86\Debug\App.xbf
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\x86\Debug\Views\ChildDeviceView.xbf
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\bin\x86\Debug\Views\ConfirmLogoutView.xbf
@@ -71,7 +72,6 @@ C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracke
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Views\ParentDeviceView.xbf
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\ChildTracker.WindowsPhone.exe
-C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\ChildTracker.WindowsPhone.pdb
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\en-US\Microsoft.Practices.ServiceLocation.Properties.Resources.resw
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\ChildTracker.WindowsPhone.csproj.GenerateResource.Cache
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation.pri

@@ -3,7 +3,6 @@ C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSen
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\LocationSenderTask.pri
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\Parse.dll
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\Parse.WinRT.dll
-C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\obj\Debug\LocationSenderTask.csprojResolveAssemblyReference.cache
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\obj\Debug\LocationSenderTask.winmd
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\obj\Debug\LocationSenderTask.pdb
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\obj\Debug\LocationSenderTask.winmdobj

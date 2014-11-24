@@ -29,18 +29,18 @@ namespace ChildTracker.Views
     /// </summary>
     public sealed partial class ParentDeviceView : Page
     {
-       
-        public const string PageKey = "Parent";
 
+        public const string PageKey = "Parent";
+        private bool isMapZoomed = false;
         public ParentDeviceView()
         {
             this.InitializeComponent();
 
             this.ViewModel = new ParentDeviceViewModel();
-            this.WelkomeMessage();
-   
+            this.WelcomeMessage();
+
         }
-              
+
 
         public ParentDeviceViewModel ViewModel
         {
@@ -54,7 +54,7 @@ namespace ChildTracker.Views
             }
         }
 
-        private void WelkomeMessage()
+        private void WelcomeMessage()
         {
             string message = "To view your child last location press \"Get child location\". \nYou can check your latest reviews from the dropdown list!";
 #if WINDOWS_PHONE_APP
@@ -67,14 +67,16 @@ namespace ChildTracker.Views
 
         private void OnLogoutClick(object sender, RoutedEventArgs e)
         {
-            ParseUser.LogOut();
-            this.Frame.Navigate(typeof(LoginSignupPage));
+            //ParseUser.LogOut();
+            //this.Frame.Navigate(typeof(LoginSignupPage));
         }
 
         private async void GetLocationBtn_Click(object sender, RoutedEventArgs e)
         {
             await this.ViewModel.GetChildLastLocation();
             this.ChildLocationMap.Center = new Geopoint(this.ViewModel.CurrentSelection);
+            this.ChildLocationMap.ClearMap();
+            this.ChildLocationMap.AddPushpin(this.ViewModel.CurrentSelection,"");
             this.ChildLocationMap.Zoom = 10d;
         }
 
@@ -88,10 +90,21 @@ namespace ChildTracker.Views
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var location = (SQLiteLocationModel)e.AddedItems[0];
             var position = new BasicGeoposition();
-            position.Latitude = ((SQLiteLocationModel)e.AddedItems[0]).Latitude;
-            position.Longitude = ((SQLiteLocationModel)e.AddedItems[0]).Longitude;
+            position.Latitude = location.Latitude;
+            position.Longitude = location.Longitude;
             this.ChildLocationMap.Center = new Geopoint(position);
+            this.ChildLocationMap.ClearMap();
+            this.ChildLocationMap.AddPushpin(position, "");
         }
+
+        private void Button_Holding(object sender, HoldingRoutedEventArgs e)
+        {
+            ParseUser.LogOut();
+            this.Frame.Navigate(typeof(LoginSignupPage));
+        }
+
+
     }
 }

@@ -14,7 +14,7 @@
         <StackPanel Style="{StaticResource controlsPanel}">
             <Button Content="Logout"
                 Style="{StaticResource LogoutButton}"
-                Click="OnLogoutClick"
+                    Holding="Button_Holding"
                 />
 
             <Button Name="GetLocationBtn" 
