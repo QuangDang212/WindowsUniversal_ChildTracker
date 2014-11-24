@@ -118,6 +118,9 @@ namespace ChildTracker
                 ApplicationDataContainer localData = ApplicationData.Current.LocalSettings;
                 localData.Values["loginType"] = ChildDeviceView.PageKey;
                 localData.Values["password"] = this.ViewModel.User.Password.GetHashCode();
+                
+                //localData.Values["userName"] = this.ViewModel.User.Username;
+                //localData.Values["userPass"] = this.ViewModel.User.Password;
                 this.Frame.Navigate(typeof(ChildDeviceView));
             }
         }

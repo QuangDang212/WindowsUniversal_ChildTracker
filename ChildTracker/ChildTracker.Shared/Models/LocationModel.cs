@@ -22,5 +22,7 @@ namespace ChildTracker.Models
             get { return GetProperty<double>(); }
             set { SetProperty<double>(value); }
         }
+
+        //TODO: Change LocationModel to hold userId 
     }
 }

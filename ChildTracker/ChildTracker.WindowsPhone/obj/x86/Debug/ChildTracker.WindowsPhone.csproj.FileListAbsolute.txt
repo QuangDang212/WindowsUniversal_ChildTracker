@@ -89,3 +89,11 @@ C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracke
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles.intermediate
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles.intermediate
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.WindowsPhone\obj\x86\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml.intermediate

@@ -9,6 +9,7 @@ using Windows.UI.Xaml;
 using Windows.ApplicationModel.Background;
 using Parse;
 using LocationSenderTask;
+using Windows.Storage;
 namespace ChildTracker.ViewModels
 {
     public class ChildDeviceViewModel : ViewModelBase
@@ -34,14 +35,25 @@ namespace ChildTracker.ViewModels
 
             await location.SaveAsync();
 
-
             ////Background task
-            //await BackgroundExecutionManager.RequestAccessAsync();
-            //BackgroundTaskBuilder taskBuilder = new BackgroundTaskBuilder { Name = "Localization task", TaskEntryPoint = "LocationSenderTask.LocationSender" };
-            //taskBuilder.SetTrigger(new TimeTrigger(30, false));
-            //BackgroundTaskRegistration myTask = taskBuilder.Register();
+            //string taskName = "Localization task";
+            //bool isRegistered = false;
+            //// check if task is already registered
+            //foreach (var cur in BackgroundTaskRegistration.AllTasks)
+            //    if (cur.Value.Name == taskName)
+            //    {
+            //        isRegistered = true;
+            //    }
 
-            //await (new MessageDialog("Task registered")).ShowAsync();          
+            //if (!isRegistered)
+            //{
+            //    await BackgroundExecutionManager.RequestAccessAsync();
+            //    BackgroundTaskBuilder taskBuilder = new BackgroundTaskBuilder { Name = taskName, TaskEntryPoint = "LocationSenderTask.LocationSender" };
+            //    taskBuilder.SetTrigger(new TimeTrigger(30, false));
+            //    BackgroundTaskRegistration myTask = taskBuilder.Register();
+
+            //    await (new MessageDialog("Task registered")).ShowAsync();
+            //}
         }
     }
 }

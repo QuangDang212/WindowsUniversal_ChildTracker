@@ -36,7 +36,8 @@
             <ComboBox x:ConnectionId='3' PlaceholderText="your latest reviews" 
                       ItemsSource="{Binding LatestLocationReviews}"
                       DisplayMemberPath="LocationDate"
-                                                                  />
+                                                                  
+                      />
             
         </StackPanel>
         <StackPanel Style="{StaticResource mapPanel}">

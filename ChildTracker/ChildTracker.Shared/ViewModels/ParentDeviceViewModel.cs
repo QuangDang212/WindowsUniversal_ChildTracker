@@ -26,7 +26,7 @@ namespace ChildTracker.ViewModels
         {
             this._locationsDb = SQLiteLocationsDBHelper.Instance();
             this._locationsDb.InitializeDB();
-            this.GetLatestLocations();
+            this.GetLocationsFromSQLiteAsync();
         }
 
         public IEnumerable<SQLiteLocationModel> LatestLocationReviews
@@ -71,7 +71,8 @@ namespace ChildTracker.ViewModels
             var latestLocation = await new ParseQuery<LocationModel>()
                 .OrderByDescending(l=>l.CreatedAt)
                 .FirstOrDefaultAsync();
-            
+            //TODO: Add user filtraton for multiple users
+
             if (latestLocation!=null)
             {
                 var position = new BasicGeoposition();
@@ -86,11 +87,12 @@ namespace ChildTracker.ViewModels
                     UserId = ParseUser.CurrentUser.ObjectId.ToString()
                 };
 
+                ((ObservableCollection<SQLiteLocationModel>)this.LatestLocationReviews).Insert(0, dbLocation);
                 await this._locationsDb.AddLocation(dbLocation);
             }
         }
 
-        private async void GetLatestLocations()
+        private async void GetLocationsFromSQLiteAsync()
         {
             var userID = ParseUser.CurrentUser.ObjectId.ToString();
             this.LatestLocationReviews = await this._locationsDb.GetLatestFiveLocationsForUser(userID);

@@ -7,8 +7,10 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Geolocation;
+using Windows.Devices.Sensors;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -36,7 +38,9 @@ namespace ChildTracker.Views
 
             this.ViewModel = new ParentDeviceViewModel();
             this.WelkomeMessage();
+   
         }
+              
 
         public ParentDeviceViewModel ViewModel
         {

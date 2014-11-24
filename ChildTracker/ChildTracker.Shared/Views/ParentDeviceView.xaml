@@ -36,7 +36,8 @@
             <ComboBox PlaceholderText="your latest reviews" 
                       ItemsSource="{Binding LatestLocationReviews}"
                       DisplayMemberPath="LocationDate"
-                      SelectionChanged="ComboBox_SelectionChanged"/>
+                      SelectionChanged="ComboBox_SelectionChanged"
+                      />
             
         </StackPanel>
         <StackPanel Style="{StaticResource mapPanel}">

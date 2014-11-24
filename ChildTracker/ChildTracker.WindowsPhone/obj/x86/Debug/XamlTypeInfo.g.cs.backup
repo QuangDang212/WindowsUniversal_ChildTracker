@@ -124,7 +124,7 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[18];
+            _typeNameTable = new string[19];
             _typeNameTable[0] = "ChildTracker.Helpers.MapView";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Grid";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.Panel";
@@ -143,8 +143,9 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
             _typeNameTable[15] = "ChildTracker.ViewModels.LoginSignupViewModel";
             _typeNameTable[16] = "ChildTracker.Views.ParentDeviceView";
             _typeNameTable[17] = "ChildTracker.ViewModels.ParentDeviceViewModel";
+            _typeNameTable[18] = "Windows.Devices.Sensors.Accelerometer";
 
-            _typeTable = new global::System.Type[18];
+            _typeTable = new global::System.Type[19];
             _typeTable[0] = typeof(global::ChildTracker.Helpers.MapView);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Grid);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.Panel);
@@ -163,6 +164,7 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
             _typeTable[15] = typeof(global::ChildTracker.ViewModels.LoginSignupViewModel);
             _typeTable[16] = typeof(global::ChildTracker.Views.ParentDeviceView);
             _typeTable[17] = typeof(global::ChildTracker.ViewModels.ParentDeviceViewModel);
+            _typeTable[18] = typeof(global::Windows.Devices.Sensors.Accelerometer);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -314,6 +316,7 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
                 userType = new global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_16_ParentDeviceView;
                 userType.AddMemberName("ViewModel");
+                userType.AddMemberName("Accelerometer");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -322,6 +325,12 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
                 userType = new global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 18:   //  Windows.Devices.Sensors.Accelerometer
+                userType = new global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
             }
@@ -399,6 +408,16 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
             var that = (global::ChildTracker.Views.ParentDeviceView)instance;
             that.ViewModel = (global::ChildTracker.ViewModels.ParentDeviceViewModel)Value;
         }
+        private object get_7_ParentDeviceView_Accelerometer(object instance)
+        {
+            var that = (global::ChildTracker.Views.ParentDeviceView)instance;
+            return that.Accelerometer;
+        }
+        private void set_7_ParentDeviceView_Accelerometer(object instance, object Value)
+        {
+            var that = (global::ChildTracker.Views.ParentDeviceView)instance;
+            that.Accelerometer = (global::Windows.Devices.Sensors.Accelerometer)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -448,6 +467,12 @@ namespace ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo
                 xamlMember = new global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlMember(this, "ViewModel", "ChildTracker.ViewModels.ParentDeviceViewModel");
                 xamlMember.Getter = get_6_ParentDeviceView_ViewModel;
                 xamlMember.Setter = set_6_ParentDeviceView_ViewModel;
+                break;
+            case "ChildTracker.Views.ParentDeviceView.Accelerometer":
+                userType = (global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ChildTracker.Views.ParentDeviceView");
+                xamlMember = new global::ChildTracker.ChildTracker_WindowsPhone_XamlTypeInfo.XamlMember(this, "Accelerometer", "Windows.Devices.Sensors.Accelerometer");
+                xamlMember.Getter = get_7_ParentDeviceView_Accelerometer;
+                xamlMember.Setter = set_7_ParentDeviceView_Accelerometer;
                 break;
             }
             return xamlMember;

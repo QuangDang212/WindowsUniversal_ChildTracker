@@ -44,6 +44,25 @@ namespace ChildTracker.SQLiteManagement
             return await query.ToListAsync();
         }
 
+        private async Task<IEnumerable<SQLiteLocationModel>> GetAllLocationsForUser(string userId)
+        {
+            SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
+            var query = conn.Table<SQLiteLocationModel>()
+                .Where(l => l.UserId == userId)
+                .OrderByDescending(l => l.LocationDate);
+            return await query.ToListAsync();
+        }
+
+        public async void DeleteEntriesForUser(string userId)
+        {
+            var locationsForUser = await this.GetAllLocationsForUser(userId);
+            SQLiteAsyncConnection conn = new SQLiteAsyncConnection(dbName);
+            foreach (var location in locationsForUser)
+            {
+                await conn.DeleteAsync(location);
+            }
+        }
+
         public async void InitializeDB()
         {
             bool dbExists = await CheckDbAsync(dbName);
