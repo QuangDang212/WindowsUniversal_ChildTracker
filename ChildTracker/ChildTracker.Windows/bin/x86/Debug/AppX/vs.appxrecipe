@@ -8,7 +8,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>508e33ac-c977-4198-a26b-c203b6bd2e1c</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>2B94AC62BE39D74B65969BB1CE996A0141654E1DDD69FB962606C1450166364F</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>4DD7D10876E23098BB687DE546BC41A381384B397A640FDC00258C4CEAA169DF</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>508e33ac-c977-4198-a26b-c203b6bd2e1c_1.0.0.0_x86__mrrf979vrpdpe</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>508e33ac-c977-4198-a26b-c203b6bd2e1c_mrrf979vrpdpe!App</RegisteredUserModeAppID>
     <RegisteredPackageID>508e33ac-c977-4198-a26b-c203b6bd2e1c</RegisteredPackageID>
@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-24T15:37:08.378</Modified>
+      <Modified>2015-01-29T13:20:58.038</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\ChildTracker.Windows.exe">
       <PackagePath>ChildTracker.Windows.exe</PackagePath>
-      <Modified>2014-11-24T15:37:05.636</Modified>
+      <Modified>2015-01-29T13:20:54.879</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\AppData\Local\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Bing.Maps.Xaml\1.313.0825.0\References\commonconfiguration\neutral\Bing.Maps.winmd">
       <PackagePath>Bing.Maps.winmd</PackagePath>
@@ -34,7 +34,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\LocationSenderTask.winmd">
       <PackagePath>LocationSenderTask.winmd</PackagePath>
-      <Modified>2014-11-24T15:37:03.094</Modified>
+      <Modified>2015-01-29T13:13:41.126</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\packages\MvvmLightLibs.5.0.2.0\lib\netcore451\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
@@ -51,6 +51,10 @@
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
       <Modified>2014-11-22T19:05:36.688</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2015-01-14T13:32:04.747</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\Libs\Parse.dll">
       <PackagePath>Parse.dll</PackagePath>
@@ -390,51 +394,51 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-11-24T15:37:04.961</Modified>
+      <Modified>2015-01-29T13:20:54.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Views\ChildDeviceView.xbf">
       <PackagePath>Views\ChildDeviceView.xbf</PackagePath>
-      <Modified>2014-11-24T15:37:04.973</Modified>
+      <Modified>2015-01-29T13:20:54.176</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Views\ConfirmLogoutView.xbf">
       <PackagePath>Views\ConfirmLogoutView.xbf</PackagePath>
-      <Modified>2014-11-24T15:37:04.976</Modified>
+      <Modified>2015-01-29T13:20:54.178</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Views\LoginSignupPage.xbf">
       <PackagePath>Views\LoginSignupPage.xbf</PackagePath>
-      <Modified>2014-11-24T15:37:04.977</Modified>
+      <Modified>2015-01-29T13:20:54.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Views\ParentDeviceView.xbf">
       <PackagePath>Views\ParentDeviceView.xbf</PackagePath>
-      <Modified>2014-11-24T15:37:04.978</Modified>
+      <Modified>2015-01-29T13:20:54.183</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Styles\ChildDeviceViewStyles.xbf">
       <PackagePath>Styles\ChildDeviceViewStyles.xbf</PackagePath>
-      <Modified>2014-11-24T15:37:04.963</Modified>
+      <Modified>2015-01-29T13:20:54.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Styles\ConfirmLogoutStyles.xbf">
       <PackagePath>Styles\ConfirmLogoutStyles.xbf</PackagePath>
-      <Modified>2014-11-24T15:37:04.965</Modified>
+      <Modified>2015-01-29T13:20:54.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Styles\LoginSignupStyles.xbf">
       <PackagePath>Styles\LoginSignupStyles.xbf</PackagePath>
-      <Modified>2014-11-24T15:37:04.966</Modified>
+      <Modified>2015-01-29T13:20:54.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Styles\ParentDeviceViewStyle.xbf">
       <PackagePath>Styles\ParentDeviceViewStyle.xbf</PackagePath>
-      <Modified>2014-11-24T15:37:04.970</Modified>
+      <Modified>2015-01-29T13:20:54.174</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Bing.Maps\Themes\Generic.xbf">
       <PackagePath>Bing.Maps\Themes\Generic.xbf</PackagePath>
-      <Modified>2014-11-24T15:42:16.521</Modified>
+      <Modified>2015-01-29T13:20:54.294</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\ChildTracker.Windows.xr.xml">
       <PackagePath>ChildTracker.Windows.xr.xml</PackagePath>
-      <Modified>2014-11-24T14:39:21.154</Modified>
+      <Modified>2015-01-29T10:18:45.394</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-24T16:36:48.255</Modified>
+      <Modified>2015-01-29T13:34:25.461</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

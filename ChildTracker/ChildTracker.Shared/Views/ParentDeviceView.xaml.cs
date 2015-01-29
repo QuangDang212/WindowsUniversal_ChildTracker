@@ -1,4 +1,5 @@
-﻿using ChildTracker.Models;
+﻿using ChildTracker.Helpers;
+using ChildTracker.Models;
 using ChildTracker.ViewModels;
 using Parse;
 using System;
@@ -10,6 +11,7 @@ using Windows.Devices.Geolocation;
 using Windows.Devices.Sensors;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -32,16 +34,15 @@ namespace ChildTracker.Views
 
         public const string PageKey = "Parent";
         private bool isMapZoomed = false;
+
         public ParentDeviceView()
         {
             this.InitializeComponent();
 
             this.ViewModel = new ParentDeviceViewModel();
             this.WelcomeMessage();
-
         }
-
-
+        
         public ParentDeviceViewModel ViewModel
         {
             get
@@ -60,15 +61,16 @@ namespace ChildTracker.Views
 #if WINDOWS_PHONE_APP
             message = "To view your child last location press \n\"Get child location\". \nYou can check your latest reviews from the dropdown list!";
 #endif
-            string title = string.Format("Welcome, {0}!", ParseUser.CurrentUser.Username);
+            
+            string title = string.Format("Welcome, {0}!", LocalData.USERNAME);
             var msg = new MessageDialog(message, title);
             msg.ShowAsync();
         }
 
         private void OnLogoutClick(object sender, RoutedEventArgs e)
         {
-            //ParseUser.LogOut();
-            //this.Frame.Navigate(typeof(LoginSignupPage));
+            this.Frame.Navigate(typeof(LoginSignupPage));
+            this.ViewModel.Logout();
         }
 
         private async void GetLocationBtn_Click(object sender, RoutedEventArgs e)
@@ -98,13 +100,6 @@ namespace ChildTracker.Views
             this.ChildLocationMap.ClearMap();
             this.ChildLocationMap.AddPushpin(position, "");
         }
-
-        private void Button_Holding(object sender, HoldingRoutedEventArgs e)
-        {
-            ParseUser.LogOut();
-            this.Frame.Navigate(typeof(LoginSignupPage));
-        }
-
-
+                
     }
 }

@@ -16,9 +16,14 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Extensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\LocalData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\LocationsHttpRequester.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\MapView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\LocationModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LoginModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SignUpModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SQLiteLocationModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SuccessfulLoginModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteManagement\SQLite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteManagement\SQLiteAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SQLiteManagement\SQLiteLocationsDBHelper.cs" />

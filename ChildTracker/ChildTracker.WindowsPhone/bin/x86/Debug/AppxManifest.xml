@@ -47,7 +47,9 @@
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
         <Path>CLRHost.dll</Path>
+        <ActivatableClass ActivatableClassId="LocationSenderTask.HttpLocationSender" ThreadingModel="both" />
         <ActivatableClass ActivatableClassId="LocationSenderTask.LocationSender" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="LocationSenderTask.BackgroundLocationModel" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>

@@ -21,6 +21,7 @@ C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracke
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\GalaSoft.MvvmLight.Platform.dll
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\LocationSenderTask.winmd
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Parse.dll
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Parse.WinRT.dll
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\LocationSenderTask.pdb
@@ -34,6 +35,7 @@ C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracke
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\GalaSoft.MvvmLight.Platform.pri
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\bin\x86\Debug\Newtonsoft.Json.xml
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\ChildTracker.Windows.csprojResolveAssemblyReference.cache
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\App.g.i.cs
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\App.g.cs
@@ -78,6 +80,14 @@ C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracke
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\ChildTracker.Windows.pdb
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\en-US\Microsoft.Practices.ServiceLocation.Properties.Resources.resw
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\ChildTracker.Windows.csproj.GenerateResource.Cache
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles.intermediate
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles.intermediate
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml.intermediate
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation.pri
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\Microsoft.Practices.ServiceLocation\qualifiers.txt
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\ChildTracker\ChildTracker.Windows\obj\x86\Debug\priconfig.xml

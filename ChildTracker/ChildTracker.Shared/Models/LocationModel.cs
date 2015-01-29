@@ -1,28 +1,18 @@
-﻿using Parse;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ChildTracker.Models
 {
-    [ParseClassName("Location")]
-    public class LocationModel : ParseObject
+
+    public class LocationModel 
     {
+        public double Longitude { get; set; }
 
-        [ParseFieldName("longitude")]
-        public double Longitude
-        {
-            get { return GetProperty<double>(); }
-            set { SetProperty<double>(value); }
-        }
-        
-        [ParseFieldName("latitude")]
-        public double Latitude
-        {
-            get { return GetProperty<double>(); }
-            set { SetProperty<double>(value); }
-        }
+        public double Latitude { get; set; }
 
-        //TODO: Change LocationModel to hold userId 
+        public DateTime CreationDate { get; set; }
+
     }
 }

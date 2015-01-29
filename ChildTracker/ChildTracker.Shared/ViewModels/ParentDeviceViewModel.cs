@@ -1,4 +1,5 @@
-﻿using ChildTracker.Models;
+﻿using ChildTracker.Helpers;
+using ChildTracker.Models;
 using ChildTracker.SQLiteManagement;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
@@ -11,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.Devices.Geolocation;
+using Windows.Storage;
 
 namespace ChildTracker.ViewModels
 {
@@ -20,7 +22,6 @@ namespace ChildTracker.ViewModels
         private BasicGeoposition _currentSelection;
         private SQLiteLocationsDBHelper _locationsDb;
         private ObservableCollection<SQLiteLocationModel> _latestLocationReviews;
-
 
         public ParentDeviceViewModel()
         {
@@ -68,10 +69,12 @@ namespace ChildTracker.ViewModels
 
         public async Task GetChildLastLocation()
         {
-            var latestLocation = await new ParseQuery<LocationModel>()
-                .OrderByDescending(l=>l.CreatedAt)
-                .FirstOrDefaultAsync();
-            //TODO: Add user filtraton for multiple users
+
+            var requester = new LocationsHttpRequester();
+            var latestLocation = await requester.GetLocation();
+            
+
+            //TODO: >>Add user filtraton for multiple users
 
             if (latestLocation!=null)
             {
@@ -83,8 +86,8 @@ namespace ChildTracker.ViewModels
                 var dbLocation = new SQLiteLocationModel(){
                     Latitude = latestLocation.Latitude,
                     Longitude = latestLocation.Longitude,
-                    LocationDate = (DateTime)latestLocation.CreatedAt,
-                    UserId = ParseUser.CurrentUser.ObjectId.ToString()
+                    LocationDate = (DateTime)latestLocation.CreationDate,
+                    UserId = LocalData.USERNAME
                 };
 
                 ((ObservableCollection<SQLiteLocationModel>)this.LatestLocationReviews).Insert(0, dbLocation);
@@ -94,8 +97,15 @@ namespace ChildTracker.ViewModels
 
         private async void GetLocationsFromSQLiteAsync()
         {
-            var userID = ParseUser.CurrentUser.ObjectId.ToString();
-            this.LatestLocationReviews = await this._locationsDb.GetLatestFiveLocationsForUser(userID);
+            //As emails are unique for all users it will be the userID in the SQLite
+            var userId = LocalData.USERNAME;
+            this.LatestLocationReviews = await this._locationsDb.GetLatestFiveLocationsForUser(userId);
+        }
+
+        public void Logout()
+        {
+            var requester = new LocationsHttpRequester();
+            requester.Logout();
         }
     }
 }

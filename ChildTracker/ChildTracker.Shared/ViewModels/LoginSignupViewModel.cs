@@ -1,4 +1,6 @@
-﻿using GalaSoft.MvvmLight;
+﻿using ChildTracker.Helpers;
+using ChildTracker.Models;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Parse;
 using System;
@@ -32,32 +34,30 @@ namespace ChildTracker.ViewModels
 
         public async Task<string> SignUpUser()
         {
-            try
-            {
-                var user = new ParseUser();
-                user.Username = this.User.Username;
-                user.Password = this.User.Password;
 
-                await user.SignUpAsync();
-                return "OK";
-            }
-            catch (Exception e)
-            {
-                return e.Message;
-            }
+            var user = new SignUpModel();
+            user.Email = this.User.Email;
+            user.Password = this.User.Password;
+            user.ConfirmPassword = this.User.Password;
+
+            var requester = new LocationsHttpRequester();
+            var message = await requester.RegisterUser(user);
+
+            return message;
         }
 
         public async Task<string> LoginUser()
         {
-            try
-            {
-                await ParseUser.LogInAsync(this.User.Username, this.User.Password);
-                return "OK";
-            }
-            catch (Exception e)
-            {                
-                return e.Message;
-            }
+            
+                var user = new LoginModel();
+                user.Username = this.User.Email;
+                user.Password = this.User.Password;
+                user.Grant_Type = "password";
+
+                var requester = new LocationsHttpRequester();
+                var message = await requester.LoginUser(user);
+
+                return message;          
         }
     }
 }

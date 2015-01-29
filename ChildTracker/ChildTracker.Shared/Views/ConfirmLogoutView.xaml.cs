@@ -1,4 +1,5 @@
-﻿using Parse;
+﻿using ChildTracker.Helpers;
+using Parse;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,14 +33,13 @@ namespace ChildTracker.Views
 
         private async void OnLogoutButtonClick(object sender, RoutedEventArgs e)
         {
-            ApplicationDataContainer localData = ApplicationData.Current.LocalSettings;
             var passwordInput = this.PasswordBoxInput.Password.GetHashCode().ToString();
-            var userPassword = localData.Values["password"].ToString();
+            var userPassword = LocalData.PASSWORD;
 
             if (passwordInput == userPassword)
             {
-                ParseUser.LogOut();
-                localData.Values["loginType"] = String.Empty;
+                var requester = new LocationsHttpRequester();
+                requester.Logout();                
                 this.Frame.Navigate(typeof(LoginSignupPage));
             }
             else

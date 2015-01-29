@@ -1,8 +1,8 @@
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\LocationSenderTask.winmd
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\LocationSenderTask.pdb
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\LocationSenderTask.pri
-C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\Parse.dll
-C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\Parse.WinRT.dll
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\Newtonsoft.Json.dll
+C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\bin\Debug\Newtonsoft.Json.xml
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\obj\Debug\LocationSenderTask.winmd
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\obj\Debug\LocationSenderTask.pdb
 C:\Users\M.Tonkov\Desktop\ChildTracker\WindowsUniversal_ChildTracker\LocationSenderTask\obj\Debug\LocationSenderTask.winmdobj

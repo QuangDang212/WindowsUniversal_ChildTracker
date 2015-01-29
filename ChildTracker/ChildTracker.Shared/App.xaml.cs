@@ -1,4 +1,5 @@
-﻿using ChildTracker.Models;
+﻿using ChildTracker.Helpers;
+using ChildTracker.Models;
 using ChildTracker.Views;
 using Parse;
 using System;
@@ -42,8 +43,9 @@ namespace ChildTracker
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
 
-            ParseObject.RegisterSubclass<LocationModel>();
-            ParseClient.Initialize("bwPWRytv93etfGAWaoQMjpeKFv7KaeYDM4wSgKNe", "8w3uxWKbmHH7walJ265zBmUpy15ZXfcDvRwLxPQq");
+            //TODO: >>For removal
+            //ParseObject.RegisterSubclass<LocationModel>();
+            //ParseClient.Initialize("bwPWRytv93etfGAWaoQMjpeKFv7KaeYDM4wSgKNe", "8w3uxWKbmHH7walJ265zBmUpy15ZXfcDvRwLxPQq");
 
         }
 
@@ -103,10 +105,11 @@ namespace ChildTracker
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                ApplicationDataContainer localData = ApplicationData.Current.LocalSettings;
-                var loginType = localData.Values["loginType"];
+                var loginType = LocalData.LOGIN_TYPE;
+                string accessToken = LocalData.TOKEN;
                 Type pageType;
-                if (ParseUser.CurrentUser == null)
+
+                if (string.IsNullOrEmpty(accessToken))
                 {
                     pageType = typeof(LoginSignupPage);
                 }

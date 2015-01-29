@@ -14,7 +14,7 @@
         <StackPanel Style="{StaticResource controlsPanel}">
             <Button x:ConnectionId='1' Content="Logout"
                 Style="{StaticResource LogoutButton}"
-                                            
+                                         
                 />
 
             <Button x:ConnectionId='2' Name="GetLocationBtn" 

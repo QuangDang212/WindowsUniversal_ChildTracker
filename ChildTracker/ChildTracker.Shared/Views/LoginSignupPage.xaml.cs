@@ -1,4 +1,5 @@
-﻿using ChildTracker.ViewModels;
+﻿using ChildTracker.Helpers;
+using ChildTracker.ViewModels;
 using ChildTracker.Views;
 using Parse;
 using System;
@@ -83,7 +84,7 @@ namespace ChildTracker
 
                 if (isSignUpSuccessful == "OK")
                 {
-                    var username = this.ViewModel.User.Username;
+                    var username = this.ViewModel.User.Email;
                     msg = string.Format("You were successfully signed in. \n Now you can choose the appropriate Login!", username);
                     msgTitle = "Successful registration!";
                 }
@@ -95,8 +96,8 @@ namespace ChildTracker
             }
 
             var dialog = new MessageDialog(msg, msgTitle);
-            await dialog.ShowAsync();
             this.ViewModel.IsLoading = false;
+            await dialog.ShowAsync();
         }
 
         private async void OnLoginParentClick(object sender, RoutedEventArgs e)
@@ -104,9 +105,9 @@ namespace ChildTracker
             var isLoginSuccessful = await this.Login();
             if (isLoginSuccessful)
             {
-                this.Frame.Navigate(typeof(ParentDeviceView));
                 ApplicationDataContainer localData = ApplicationData.Current.LocalSettings;
-                localData.Values["loginType"] = ParentDeviceView.PageKey;
+                LocalData.LOGIN_TYPE = ParentDeviceView.PageKey;
+                this.Frame.Navigate(typeof(ParentDeviceView));
             }
         }
 
@@ -115,12 +116,8 @@ namespace ChildTracker
             var isLoginSuccessful = await this.Login();
             if (isLoginSuccessful)
             {
-                ApplicationDataContainer localData = ApplicationData.Current.LocalSettings;
-                localData.Values["loginType"] = ChildDeviceView.PageKey;
-                localData.Values["password"] = this.ViewModel.User.Password.GetHashCode();
-                
-                //localData.Values["userName"] = this.ViewModel.User.Username;
-                //localData.Values["userPass"] = this.ViewModel.User.Password;
+                LocalData.LOGIN_TYPE = ChildDeviceView.PageKey;
+                LocalData.PASSWORD = this.ViewModel.User.Password.GetHashCode().ToString();                               
                 this.Frame.Navigate(typeof(ChildDeviceView));
             }
         }
@@ -157,12 +154,12 @@ namespace ChildTracker
 
         private bool isUserInputValid()
         {
-            var username = this.ViewModel.User.Username;
+            var email = this.ViewModel.User.Email;
             var password = this.ViewModel.User.Password;
 
-            if (string.IsNullOrEmpty(username) ||
+            if (string.IsNullOrEmpty(email) ||
                 string.IsNullOrEmpty(password) ||
-                username.Length < 5 || password.Length < 5)
+                email.Length < 5 || password.Length < 5)
             {
                 return false;
             }

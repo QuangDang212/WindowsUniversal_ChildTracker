@@ -10,6 +10,7 @@ using Windows.ApplicationModel.Background;
 using Parse;
 using LocationSenderTask;
 using Windows.Storage;
+using ChildTracker.Helpers;
 namespace ChildTracker.ViewModels
 {
     public class ChildDeviceViewModel : ViewModelBase
@@ -33,7 +34,9 @@ namespace ChildTracker.ViewModels
                 Longitude = lon
             };
 
-            await location.SaveAsync();
+            var requester = new LocationsHttpRequester();
+            requester.SendLocation(location);
+
 
             ////Background task
             //string taskName = "Localization task";

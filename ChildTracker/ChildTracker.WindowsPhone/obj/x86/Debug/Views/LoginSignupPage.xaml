@@ -23,8 +23,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Username:" Grid.Row="0" Style="{StaticResource UserDataLabel}"/>
-        <TextBox Name="UsernameInput" PlaceholderText="Username" Grid.Row="1" Style="{StaticResource UsernameInput}" Text="{Binding User.Username, Mode=TwoWay}"/>
+        <TextBlock Text="Email:" Grid.Row="0" Style="{StaticResource UserDataLabel}"/>
+        <TextBox Name="UsernameInput" PlaceholderText="Email" Grid.Row="1" Style="{StaticResource UsernameInput}" Text="{Binding User.Email, Mode=TwoWay}"/>
         <TextBlock Text="Password:" Grid.Row="2" Style="{StaticResource UserDataLabel}"/>
         <PasswordBox Name="PasswordInput" PlaceholderText="Password"  Grid.Row="3" Style="{StaticResource PasswordInput}" Password="{Binding User.Password, Mode=TwoWay}"/>
         <Button x:ConnectionId='1' Content="Login Child device" Style="{StaticResource LoginChild}"                          />

@@ -4,7 +4,7 @@
     <RootPropertyPathName Name="IsLoading" />
     <RootPropertyPathName Name="User" />
     <RootPropertyPathName Name="Password" />
-    <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="Email" />
     <RootPropertyPathName Name="LatestLocationReviews" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -21,7 +21,6 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Name" />
       <RootEvent Name="Click" />
-      <RootEvent Name="Holding" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ContentControl">
       <RootProperty Name="Content" />
